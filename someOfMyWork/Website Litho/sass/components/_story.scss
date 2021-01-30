@@ -1,0 +1,80 @@
+.story {
+    grid-column: col-start 2 / col-end 7;
+    margin: 12rem 0;
+    display: grid;
+    grid-template-columns: 28rem repeat(2, 1fr);
+    grid-gap: 2rem;
+   
+
+    &_years {
+        display: flex;
+        padding: 3rem 2rem 3rem 3rem;
+        background-image: linear-gradient(rgba($color-white, .1), rgba($color-white, .1)),
+        linear-gradient(rgba($color-white, .1), rgba($color-white, .1)),
+        linear-gradient(rgba($color-white, .1), rgba($color-white, .1)),
+        linear-gradient(rgba($color-white, .1), rgba($color-white, .1));
+        background-repeat: no-repeat;
+        background-size: 5rem 1rem;
+        background-position: top left, top right, bottom left, bottom right;
+        border: solid rgba($color-white, .1);
+        border-width: 0 1rem;
+    
+        &-number {
+            color: $color-secondary;
+            font-size: 9rem;
+            font-weight: bold;
+           
+        }
+
+        p {
+            color: $color-white;
+            font-size: 1.6rem;
+            width: 20%;
+            padding: 2rem;
+            
+        }
+    }
+
+    &__since {
+        width: 20rem;
+        justify-self: center;
+        align-self: center;
+        padding-left: 2rem;
+        &-heading {
+            color: $color-font;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &-text {
+            color: $color-white;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+    }
+
+    &__text {
+        width: 40rem;
+        align-self: start;
+        color: $color-font;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        p {
+            margin-bottom: 4rem;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: $color-font;
+            text-decoration: none;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid currentColor;
+            transition: all .8s;
+        }
+
+        a:hover {
+            color: #6b6c6e;
+        }
+    }
+}

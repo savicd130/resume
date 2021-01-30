@@ -1,0 +1,21 @@
+.heading-1 {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap: 4rem;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: $color-secondary;
+
+        &::before,
+        &::after {
+            content: "";
+            background-color: $color-font;
+            height: 0.08rem;
+            opacity: .3;
+
+        }
+}

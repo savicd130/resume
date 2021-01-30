@@ -1,0 +1,61 @@
+.world {
+    grid-column: center-start / center-end;
+    height: 70vh;
+    margin: 3rem 0;
+    background-color: #1F2128;
+
+
+    display: flex;
+    &__logo {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        &-title {
+            margin-left: -3.85rem;
+            font-size: 20rem;
+            text-transform: lowercase;
+            color: $color-secondary;
+            font-weight: 700;
+            opacity: .3;
+        }
+
+        &-img {
+            margin-left: -15.5rem;
+            height: 50%;
+            width: auto;
+        }
+    }
+
+    &__offices {
+        align-self: start;
+        padding: 14rem 0;
+        margin-left: 8rem;
+        display: flex;
+        flex-direction: column;
+        color: $color-font;
+        align-items: flex-start;
+        &-heading {
+            font-size: 3.5rem;
+            color: $color-white;
+            width: 70%;
+            margin-bottom: 4rem;
+        }
+
+        &-text {
+            font-size: 1.5rem;
+            width: 60%;
+            margin-bottom: 5rem;
+            line-height: 2.5rem;
+            
+        }
+
+        &-btn {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: currentColor;
+            cursor: pointer;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: .5rem;
+        }
+    }
+}

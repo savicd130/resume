@@ -1,0 +1,151 @@
+.header {
+    grid-column: center-start / center-end;
+    
+
+    display: grid;
+    grid-template-rows: 10rem calc(100vh - 10rem);
+
+    &__top {
+        display: grid;
+        grid-template-columns: 1fr max-content min-content;
+        align-items: center;
+        grid-column-gap: 3rem;
+    }
+
+    &__logo {
+        width: 10.5rem;
+        &-pic{
+            width: 100%;
+        }
+    }
+
+    &__number {
+        color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    &__burger {
+        width: 2rem;
+        height: 2.5px;
+        display: block;
+        background-color: $color-white;
+        
+
+
+        &::before,
+        &::after {
+            content: "";
+            width: 1.5rem;
+            height: 1.5px;
+            display: block;
+            background-color: $color-white;
+            margin: 0 auto;
+            
+        }
+
+        &::before {transform: translateY(-.5rem);}
+        &::after {transform: translateY(.5rem);}
+    }
+
+
+    &__slider {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr 1fr 20rem;
+
+
+        &-picture {
+            grid-row: 1 / -1;
+            grid-column: 1 / -1;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+        }
+
+
+
+        /********HEADING********/
+
+        &-title {
+            grid-row: 2 / 3;
+            grid-column: 2 / 5;
+            display: grid;
+            grid-template-columns: 12rem max-content;
+            height: 75%;
+            align-items: center;
+            grid-column-gap: 6rem;
+            transform: translateX(10rem);
+
+            &-number {
+                font-weight: 700;
+                padding-top: 3rem;
+                background-color: $color-secondary;
+                grid-row: 1 / span 2;
+                font-size: 7rem;
+                align-self: stretch;
+                color: #23262D;
+                
+                
+            }
+
+            &-heading {
+                font-size: 5.5rem;
+                font-weight: 700;
+                word-wrap: break-word;
+                color: $color-white;
+            }
+
+            &-btn {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                color: $color-white;
+                line-height: 1rem;
+                text-decoration: none;
+                border-bottom: 1px solid $color-white;
+                justify-self: start;
+                padding-bottom: .5rem;
+            }
+        }
+
+
+
+
+        /****** BOXES ***********/
+        &-experts {
+            grid-row: 3 / 4;
+            grid-column: 5 / -1;
+            background-color: $color-primary;
+            display: flex;
+            align-items: center;
+            padding: 5rem;
+            
+            
+        }
+
+        &-boxs {
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-right: 1px solid $color-border-grey;
+            }
+
+            &-heading {
+                color: $color-white;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+
+                &-sec_col {
+                    color: $color-secondary;
+                }
+            }
+
+            &-content {
+                color: $color-font;
+            }
+        }
+
+
+    }
+}

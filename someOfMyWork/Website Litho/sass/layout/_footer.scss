@@ -1,0 +1,64 @@
+.footer {
+    grid-column: center-start / center-end;
+    margin-top: 10rem;
+    border-top: 0.08rem solid #393C42;
+    padding: 6.5rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+        &__logo {
+            width: 11rem;
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &__info {
+            
+            display: flex;
+            color: $color-font;
+            position: relative;
+            
+
+
+            a {
+                color: $color-font;
+                text-decoration: none;
+                transition: .4s;
+            }
+
+            a:hover {
+                color: $color-secondary;
+            }
+
+            span {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+        }
+
+
+        &__social {
+            display: flex;
+        }
+
+        &__icon {
+            cursor: pointer;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: block;
+            margin-right: 1rem;
+            transition: all .2s;
+
+             &-img {
+                 width: 100%;
+             }
+        }
+
+        &__icon:hover {
+            opacity: .5;
+        }
+}

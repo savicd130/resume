@@ -1,0 +1,104 @@
+.boxing {
+    grid-column: center-start / center-end;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+
+    &__shape {
+        overflow: hidden;
+        position: relative;
+
+
+        &::before {
+            display: block;
+            content: '';
+            background-color: $color-white;
+            border-radius: 50%;
+            background-image: url('../img/arrow-right-solid.png');
+            background-size: 1.5rem 1.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 4rem;
+            width: 4rem;
+            
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 100;
+        }
+        
+    }
+
+   
+
+
+
+    &__shape:hover &__img {
+        transform: scale(1.3);
+        transition: transform 3s ease-out;
+    }
+
+    &__shape:hover::after {
+        display: block;
+        position: absolute;
+        background-image: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 1),);
+        margin-top: -35rem;
+        height: 35rem;
+        width: 100%;
+        content: '';
+    }
+
+
+    &__img {
+        max-width: 100%;
+        filter: brightness(80%);
+        display:block;
+        transition: transform 1s ease-out;
+    }
+
+    &__heading {
+        position: absolute;
+        font-size: 2.5rem;
+        color: $color-white;
+        font-weight: 500;
+        width: 30%;
+        padding: 5.5rem;
+        z-index: 5;
+    }
+
+
+    &__shape:hover::before {
+        opacity: 0;
+    }
+    
+    &__shape:hover &__caption {
+        opacity: 1;
+        transform: translateY(-2rem);
+        transition: all 1s;
+    }
+
+    &__caption {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        position: absolute;
+        bottom: 3.5rem;
+        left: 6rem;
+        z-index: 200;
+        transition: all .4s;
+        p {
+            color: $color-font;
+            line-height: 2.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: $color-secondary;
+            text-decoration: none;
+        }
+    }   
+}

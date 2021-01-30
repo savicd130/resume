@@ -1,0 +1,36 @@
+.managed {
+    grid-column: col-start 2 / col-end 7;
+    margin: 12rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    &__bold {
+        padding-right: 12rem;
+        color: $color-white;
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+
+    &__box {
+        display: flex;
+        
+    }
+
+    &__owner {
+        padding: 0 3rem;
+        font-size: 1.6rem;
+
+        &-heading {
+            color: $color-white;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        &-text {
+            color: $color-font;
+            line-height: 2.5rem;
+        }
+    }
+
+}

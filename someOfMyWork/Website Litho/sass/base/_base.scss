@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.2%;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: $color-primary;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: [full-start] minmax(3.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 17.5rem) [col-end]) [center-end] minmax(3.5rem,1fr) [full-end];
+}
+
+
+
+
+
+
+
+
+/*
+[full-start] minmax(3.5rem, 1fr) [center-start] repeat(8, [col-start]  minmax(min-content,17.5rem) [col-end]) [center-end] minmax(3.5rem, 1fr) [full-end];
+*/

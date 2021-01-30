@@ -1,0 +1,87 @@
+.blog {
+    grid-column: center-start / center-end;
+    margin: 5rem 0;
+}
+
+
+
+.card {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    
+        &__box {
+            position: relative;
+            overflow: hidden;            
+        }
+        &__box:hover &__img {
+            transform: scale(1.1);
+            filter: brightness(40%);
+            
+        }
+
+        &__box:hover &__desc {
+            background-color: $color-white;
+            color: $color-font;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(60%);
+            transition: all 1s;
+        }
+
+        &__desc {
+            cursor: pointer;
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            padding: .7rem 1.2rem;
+            text-transform: uppercase;
+            color: $color-white;
+            font-size: 1.2rem;
+            border-radius: 2px;
+            background-color: rgba(#000, .6);
+            font-weight: 700;
+            transition: all .5s;
+        }
+
+        &__heading {
+            cursor: pointer;
+            position: absolute;
+            bottom: 6rem;
+            left: 5rem;
+            font-weight: 700;
+            &-subtitle {
+                color: #8C8985;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                padding-bottom: 2rem;
+            }
+
+            &-title {
+                color: $color-white;
+                font-size: 2rem;
+                width: 80%;
+                line-height: 2.5rem;
+            }
+        }
+}
+
+
+.project {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-white;
+
+        span {
+            color: $color-secondary;
+            border-bottom: 2px solid currentColor;
+            cursor: pointer;
+        }
+}
